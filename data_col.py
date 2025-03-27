@@ -2,6 +2,7 @@ import yfinance as yf
 import pandas as pd
 import pytz
 from pathlib import Path
+from sklearn.preprocessing import StandardScaler
 
 def collect_data(ticker: str, save_path: str = "sector_data"):
     """Fetches historical data for a given ticker and saves it as a CSV file."""
@@ -43,27 +44,22 @@ def load_price_data(filenames: list, data_path: str = "sector_data") -> pd.DataF
 
         data_frames.append(df[[file]])
 
-    # Merge all data on the date index and drop missing values
     return pd.concat(data_frames, axis=1).dropna()
 
 def add_vol(df):
+    """Calculating and adding volitility indicators"""
     df['Return'] = df['SPY'].pct_change()
-
-    # Compute 20-day and 60-day rolling standard deviations
     df['vol20'] = df['Return'].rolling(window=20).std()
     df['vol60'] = df['Return'].rolling(window=60).std()
-
-    # Compute vol20/vol60 ratio
     df['volRatio'] = df['vol20'] / df['vol60']
 
 def main():
     sectors = ["XLC", "XLY", "XLP", "XLE", "XLF", "XLV", "XLI", "XLK", "XLB", "XLRE", "XLU", "SPY", "VIX"]
-
-    # for sector in sectors:
-    #     collect_data(sector)
-
+    for sector in sectors:
+        collect_data(sector)
     price_data = load_price_data(sectors)
     add_vol(price_data)
+    
     price_data.to_csv("all_sector_data.csv", index=True)
     print(price_data.head())
 
