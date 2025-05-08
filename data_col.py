@@ -6,6 +6,8 @@ from sklearn.preprocessing import StandardScaler
 
 def collect_data(ticker: str, save_path: str = "sector_data"):
     """Fetches historical data for a given ticker and saves it as a CSV file."""
+    if ticker == "VIX": #Don't want to use yfinance for VIX info -> manually download from CBOE
+        return
     save_dir = Path(save_path)
     save_dir.mkdir(parents=True, exist_ok=True)
     
@@ -31,8 +33,9 @@ def load_price_data(filenames: list, data_path: str = "sector_data") -> pd.DataF
 
     for file in filenames:
         file_path = data_dir / f"{file}.csv"
+        print(file)
         df = pd.read_csv(file_path, parse_dates=["Date"], index_col="Date")
-
+        
         if file == "VIX":
             df = fix_vix_date(df)
             df = df.set_index("Date")
@@ -55,12 +58,14 @@ def add_vol(df):
 
 def main():
     sectors = ["XLC", "XLY", "XLP", "XLE", "XLF", "XLV", "XLI", "XLK", "XLB", "XLRE", "XLU", "SPY", "VIX"]
-    for sector in sectors:
-        collect_data(sector)
+    
+    #for sector in sectors:
+    #    collect_data(sector)
+
     price_data = load_price_data(sectors)
     add_vol(price_data)
     
-    price_data.to_csv("all_sector_data.csv", index=True)
+    price_data.to_csv("all_sector_data-4-15.csv", index=True)
     print(price_data.head())
 
 if __name__ == "__main__":
