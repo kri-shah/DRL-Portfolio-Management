@@ -6,9 +6,13 @@
 
 ## Overview
 
-This project explores the application of Deep Reinforcement Learning (DRL) to long-only portfolio management using sector-level S&P 500 ETFs. Two agents—Proximal Policy Optimization (PPO) and Soft Actor-Critic (SAC)—are benchmarked against classical strategies like Mean-Variance Optimization (MVO) and Dollar-Cost Averaging (DCA). The environment models realistic constraints such as transaction costs and market volatility.
+This project explores the application of Deep Reinforcement Learning (DRL) to long-only portfolio management using sector-level S&P 500 ETFs. Two agents—Proximal Policy Optimization (PPO) and Soft Actor-Critic (SAC)—are benchmarked against classical strategies like Mean-Variance Optimization (MVO) and Dollar-Cost Averaging (DCA). The environment models realistic constraints such as transaction costs and market volatility. 
 
-## Performance Metrics (on Test Set (2023-12-01 to 2025-04-15))
+## Goal
+
+Achieve a greater Sharpe Ratio than DCA and MVO. 
+
+## Performance Metrics (on Test Set (12-01-2023 to 04-15-2025))
 
 | Strategy | Sharpe Ratio | Max Drawdown | CAGR     | Return (%) |
 |----------|--------------|---------------|----------|------------|
@@ -17,6 +21,7 @@ This project explores the application of Deep Reinforcement Learning (DRL) to lo
 | SAC      | 0.53         | 16.02%        | 11.35%   | 13.10%     |
 | MVO      | 0.39         | 18.06%        | 9.94%    | 10.49%     |
 
+## Goal achieved! On test range, PPO beats all other stratgies!
 
 ## Features
 
@@ -28,7 +33,7 @@ This project explores the application of Deep Reinforcement Learning (DRL) to lo
 
 ## Data
 
-- **Sector ETFs**: XLC, XLY, XLP, XLE, XLF, XLV, XLI, XLK, XLB, XLRE, XLU
+- **SPDR Sector ETFs**: XLC, XLY, XLP, XLE, XLF, XLV, XLI, XLK, XLB, XLRE, XLU
 - **Market Index**: SPY (S&P 500)
 - **Volatility**: VIX, 20D/60D rolling volatility
 - **Transaction Cost**: 0.1% per trade
@@ -60,12 +65,18 @@ This project explores the application of Deep Reinforcement Learning (DRL) to lo
 - `PyPortfolioOpt`
 - `matplotlib`, `pandas`, `numpy`, `tensorboard`
 
-## How to Run
+## How to Collect Data
+
+1. Download VIX data from [https://www.cboe.com/tradable_products/vix/vix_historical_data/]
+2. In data_col.py, uncomment the for loop in main function
+3. Run data_col.py
+
+## How to Train/Test
 
 1. Clone the repository
 2. Install dependencies:  
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirements.txt //coming soon!
    ```
 3. Run drl_train.ipynb 
 4. Evaluate by running drl_inference.ipynb
@@ -78,4 +89,4 @@ This project explores the application of Deep Reinforcement Learning (DRL) to lo
 
 ## Acknowledgements
 
-Inspired by [Sood et al. (2023)](https://icaps23.icaps-conference.org/) and supported by guidance from Prof. Ji. Special thanks to the creators of `stable-baselines3`, `PyPortfolioOpt`, and `Gymnasium`.
+Inspired by [Sood et al. (2023)](https://icaps23.icaps-conference.org/papers/finplan/FinPlan23_paper_4.pdf) and supported by guidance from Prof. Ji. 
