@@ -78,4 +78,4 @@ This project explores the application of Deep Reinforcement Learning (DRL) to lo
 
 ## Acknowledgements
 
-Inspired by [Sood et al. (2023)](https://icaps23.icaps-conference.org/) and supported by guidance from Prof. Ji. Special thanks to the creators of `stable-baselines3`, `PyPortfolioOpt`, and `Gymnasium`.
+Inspired by [Sood et al. (2023)](https://icaps23.icaps-conference.org/papers/finplan/FinPlan23_paper_4.pdf) and supported by guidance from Prof. Ji. 
