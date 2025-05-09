@@ -71,7 +71,7 @@ Achieve a greater Sharpe Ratio than DCA and MVO.
 2. In data_col.py, uncomment the for loop in main function
 3. Run data_col.py
 
-## How to Train/Tes
+## How to Train/Test
 
 1. Clone the repository
 2. Install dependencies:  
