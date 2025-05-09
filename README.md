@@ -67,14 +67,8 @@ This project explores the application of Deep Reinforcement Learning (DRL) to lo
    ```bash
    pip install -r requirements.txt
    ```
-3. Run training:
-   ```bash
-   python train_ppo.py  # or train_sac.py
-   ```
-4. Evaluate:
-   ```bash
-   python evaluate.py
-   ```
+3. Run drl_train.ipynb 
+4. Evaluate by running drl_inference.ipynb
 
 ## Future Work
 
