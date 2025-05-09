@@ -12,7 +12,7 @@ This project explores the application of Deep Reinforcement Learning (DRL) to lo
 
 Achieve a greater Sharpe Ratio than DCA and MVO. 
 
-## Performance Metrics (on Test Set (12-01-2023 to 04-15-2025))
+## Performance (12-01-2023 to 04-15-2025 (test range))
 
 | Strategy | Sharpe Ratio | Max Drawdown | CAGR     | Return (%) |
 |----------|--------------|---------------|----------|------------|
