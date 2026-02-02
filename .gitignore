@@ -1,0 +1,197 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+virtualenv/
+.conda/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# PyCharm / IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.env
+
+# Data files
+*.csv
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.parquet
+*.feather
+*.xlsx
+*.xls
+*.db
+*.sqlite
+*.sqlite3
+
+# Model files and checkpoints
+*.zip
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.pb
+*.onnx
+*.tflite
+models/
+checkpoints/
+saved_models/
+weights/
+
+# Logs and monitoring
+*.log
+logs/
+tb_logs/
+tensorboard_logs/
+wandb/
+mlruns/
+opt_logs/
+*.out
+*.err
+
+# Data directories
+data/
+datasets/
+sector_data/
+*.csv
+
+# Python version management
+.python-version
+.pipenv/
+Pipfile.lock
+poetry.lock
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+*.cover
+*.py,cover
+.cache
+nosetests.xml
+coverage.xml
+*.mo
+*.pot
+
+# Documentation
+docs/_build/
+site/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Profiling
+.prof
+
+# Distribution / packaging
+*.whl
+
+# Specific project files (keep these patterns for your project)
+sac_params.txt
+vec_stats.pkl
+ppo_vec_normalize*.pkl
+vecnorm*.pkl
+ppo_model*.zip
+sac_model*.zip
+ppo_best*.zip
+ppo_best*.pkl
+PPO_*.db
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.#*
+\#*#
+
+PPO_with_SAC.ipynb

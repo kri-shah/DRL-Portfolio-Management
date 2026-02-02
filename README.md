@@ -76,7 +76,7 @@ Achieve a greater Sharpe Ratio than DCA and MVO.
 1. Clone the repository
 2. Install dependencies:  
    ```bash
-   pip install -r requirements.txt //coming soon!
+   pip install -r requirements.txt
    ```
 3. Run drl_train.ipynb 
 4. Evaluate by running drl_inference.ipynb
