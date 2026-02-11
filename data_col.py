@@ -59,13 +59,13 @@ def add_vol(df):
 def main():
     sectors = ["XLC", "XLY", "XLP", "XLE", "XLF", "XLV", "XLI", "XLK", "XLB", "XLRE", "XLU", "SPY", "VIX"]
     
-    #for sector in sectors:
-    #    collect_data(sector)
+    # for sector in sectors:
+    #     collect_data(sector)
 
     price_data = load_price_data(sectors)
     add_vol(price_data)
     
-    price_data.to_csv("all_sector_data-4-15.csv", index=True)
+    price_data.to_csv("all_sector_data-2-2-26.csv", index=True)
     print(price_data.head())
 
 if __name__ == "__main__":
